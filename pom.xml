@@ -7,6 +7,13 @@
   <version>0.0.1-SNAPSHOT</version>
   <name>autorder Maven Webapp</name>
   <url>http://maven.apache.org</url>
+  
+  <properties>
+  	<spring.version>4.3.10.RELEASE</spring.version>
+  	<tiles.version>3.0.7</tiles.version>
+  </properties>
+  
+  
   <dependencies>
     <dependency>
       <groupId>junit</groupId>
