@@ -11,10 +11,10 @@
 	
 	<import resource="classpath:spring-tiles.xml"/>
 	<import resource="classpath:spring-aop.xml"/>
+	
 	<mvc:annotation-driven />
 	
-	<context:component-scan base-package="cn.star.autorder.usermanager.controller" />
+	<context:component-scan base-package="cn.star.autorder.usermanager" />
 	
-	<bean id="service" class="cn.star.autorder.usermanager.service.TestService" />
 	
 </beans>

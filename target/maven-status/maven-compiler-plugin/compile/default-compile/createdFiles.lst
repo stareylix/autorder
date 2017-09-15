@@ -1,0 +1,4 @@
+cn\star\autorder\common\LogAspectService.class
+cn\star\autorder\usermanager\service\IUserService.class
+cn\star\autorder\usermanager\service\impl\UserServiceImpl.class
+cn\star\autorder\usermanager\controller\UserController.class
