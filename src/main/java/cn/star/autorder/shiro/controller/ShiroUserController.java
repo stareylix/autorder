@@ -1,4 +1,4 @@
-package cn.star.autorder.controller;
+package cn.star.autorder.shiro.controller;
 
 import javax.servlet.http.HttpServletRequest;
 
