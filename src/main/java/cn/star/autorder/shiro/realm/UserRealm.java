@@ -8,6 +8,7 @@ import org.apache.shiro.subject.PrincipalCollection;
 import org.apache.shiro.util.ByteSource;
 import org.springframework.beans.factory.annotation.Autowired;
 
+import cn.star.autorder.shiro.dao.EnabledFlag;
 import cn.star.autorder.shiro.entity.ShiroUser;
 import cn.star.autorder.shiro.service.ShiroService;
 
@@ -47,7 +48,7 @@ public class UserRealm extends AuthorizingRealm {
             throw new UnknownAccountException();//没找到帐号
         }
 
-        if(Boolean.TRUE.equals(user.getLocked())) {
+        if(user.getLocked()==EnabledFlag.DISABLED) {
             throw new LockedAccountException(); //帐号锁定
         }
 
@@ -55,7 +56,7 @@ public class UserRealm extends AuthorizingRealm {
         SimpleAuthenticationInfo authenticationInfo = new SimpleAuthenticationInfo(
                 user.getUsername(), //用户名
                 user.getPassword(), //密码
-                ByteSource.Util.bytes(user.getCredentialsSalt()),//salt=username+salt
+                ByteSource.Util.bytes(user.getCredentialsSalt()),
                 getName()  //realm name
         );
         return authenticationInfo;

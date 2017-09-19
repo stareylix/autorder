@@ -4,6 +4,7 @@ import org.apache.shiro.crypto.RandomNumberGenerator;
 import org.apache.shiro.crypto.SecureRandomNumberGenerator;
 import org.apache.shiro.crypto.hash.SimpleHash;
 import org.apache.shiro.util.ByteSource;
+import org.springframework.stereotype.Service;
 
 import cn.star.autorder.shiro.entity.ShiroUser;
 
@@ -12,6 +13,7 @@ import cn.star.autorder.shiro.entity.ShiroUser;
  * <p>Date: 14-1-28
  * <p>Version: 1.0
  */
+@Service
 public class PasswordHelper {
 
     private RandomNumberGenerator randomNumberGenerator = new SecureRandomNumberGenerator();
@@ -31,9 +33,9 @@ public class PasswordHelper {
     }
 
     public void encryptPassword(ShiroUser user) {
-
+    	
         user.setSalt(randomNumberGenerator.nextBytes().toHex());
-
+        System.out.println("CredentialsSalt="+user.getCredentialsSalt());
         String newPassword = new SimpleHash(
                 algorithmName,
                 user.getPassword(),

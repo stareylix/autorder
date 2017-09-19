@@ -56,7 +56,8 @@ public class ShiroUser implements Serializable {
     }
 
     public String getCredentialsSalt() {
-        return username + salt;
+    	//此处增加证书算法
+        return salt+username;
     }
 
     public Integer getLocked() {

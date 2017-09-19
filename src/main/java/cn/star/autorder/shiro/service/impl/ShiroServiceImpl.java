@@ -14,7 +14,7 @@ import cn.star.autorder.shiro.service.ShiroService;
 @Service
 public class ShiroServiceImpl implements ShiroService {
 	
-	@Autowired
+//	@Autowired
 	private ShiroDao shiroDao;
 	
 	@Override
@@ -56,7 +56,8 @@ public class ShiroServiceImpl implements ShiroService {
 	@Override
 	public ShiroUser createUser(ShiroUser user) {
 		// TODO Auto-generated method stub
-		return shiroDao.createUser(user);
+//		return shiroDao.createUser(user);
+		return user;
 	}
 
 	@Override
