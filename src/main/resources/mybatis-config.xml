@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" ?>  
+<!DOCTYPE configuration PUBLIC "-//mybatis.org//DTD Config 3.0//EN" "http://mybatis.org/dtd/mybatis-3-config.dtd">  
+<configuration>  
+    <typeAliases>  
+        <typeAlias alias="shiroUser" type="cn.star.autorder.shiro.entity.ShiroUser"/>  
+        <typeAlias alias="role" type="cn.star.autorder.shiro.entity.Role"/>  
+        <typeAlias alias="permission" type="cn.star.autorder.shiro.entity.Permission"/>  
+    </typeAliases>
+</configuration> 

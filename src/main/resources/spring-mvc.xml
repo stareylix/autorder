@@ -14,7 +14,6 @@
 	
 	<mvc:annotation-driven />
 	
-	<context:component-scan base-package="cn.star.autorder.usermanager" />
-	
+	<context:component-scan base-package="cn.star.autorder" />
 	
 </beans>

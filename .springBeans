@@ -11,9 +11,10 @@
 		<config>src/main/resources/spring-application.xml</config>
 		<config>src/main/resources/spring-mybatis.xml</config>
 		<config>src/main/resources/spring-tiles.xml</config>
-		<config>src/main/resources/spring-shrio.xml</config>
 		<config>spring-aop.xml</config>
 		<config>src/main/resources/spring-aop.xml</config>
+		<config>src/main/resources/spring-redis.xml</config>
+		<config>src/main/resources/mybatis-config.xml</config>
 	</configs>
 	<autoconfigs>
 	</autoconfigs>

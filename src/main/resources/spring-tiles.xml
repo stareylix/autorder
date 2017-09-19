@@ -6,7 +6,7 @@
 	<bean id="tilesConfigurer" class="org.springframework.web.servlet.view.tiles3.TilesConfigurer">
 		<property name="definitions">
 			<list>
-				<value>classpath:tiles/definitions/def.xml</value>
+				<value>classpath:tiles/**/*.xml</value>
 			</list>
 		</property>
 	</bean>

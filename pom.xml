@@ -11,6 +11,7 @@
   <properties>
   	<spring.version>4.3.10.RELEASE</spring.version>
   	<tiles.version>3.0.7</tiles.version>
+  	<shiro.version>1.4.0</shiro.version>
   </properties>
   
   <dependencies>
@@ -234,18 +235,27 @@
 	    <version>1.6</version>
 	</dependency>
     
-    <!-- https://mvnrepository.com/artifact/com.mchange/c3p0 -->
+    <!-- https://mvnrepository.com/artifact/com.mchange/c3p0 
 	<dependency>
 	    <groupId>com.mchange</groupId>
 	    <artifactId>c3p0</artifactId>
 	    <version>0.9.5.2</version>
 	</dependency>
+    -->
     
-    <!-- https://mvnrepository.com/artifact/com.mchange/mchange-commons-java -->
+    <!-- https://mvnrepository.com/artifact/com.mchange/mchange-commons-java
 	<dependency>
 	    <groupId>com.mchange</groupId>
 	    <artifactId>mchange-commons-java</artifactId>
 	    <version>0.2.12</version>
+	</dependency>
+     -->
+	
+	
+	<dependency>  
+	    <groupId>com.alibaba</groupId>  
+	    <artifactId>druid</artifactId>  
+	    <version>1.1.3</version>  
 	</dependency>
     
     <!-- https://mvnrepository.com/artifact/commons-net/commons-net -->
@@ -289,8 +299,59 @@
 	    <groupId>org.mybatis</groupId>
 	    <artifactId>mybatis-spring</artifactId>
 	    <version>1.3.1</version>
-	</dependency> 
-      
+	</dependency>
+	
+	<!-- https://mvnrepository.com/artifact/redis.clients/jedis -->
+	<!-- 不用 -->
+	<dependency>
+	    <groupId>redis.clients</groupId>
+	    <artifactId>jedis</artifactId>
+	    <version>2.9.0</version>
+	</dependency>
+	 
+    <!-- https://mvnrepository.com/artifact/org.crazycake/shiro-redis 
+	<dependency>
+	    <groupId>org.crazycake</groupId>
+	    <artifactId>shiro-redis</artifactId>
+	    <version>1.0.0-RELEASE</version>
+	</dependency>
+    -->
+    
+    <!-- https://mvnrepository.com/artifact/org.apache.shiro/shiro-core -->
+	<dependency>
+	    <groupId>org.apache.shiro</groupId>
+	    <artifactId>shiro-core</artifactId>
+	    <version>${shiro.version}</version>
+	</dependency>
+    
+    <!-- https://mvnrepository.com/artifact/org.apache.shiro/shiro-web -->
+	<dependency>
+	    <groupId>org.apache.shiro</groupId>
+	    <artifactId>shiro-web</artifactId>
+	    <version>${shiro.version}</version>
+	</dependency>
+    
+    <!-- https://mvnrepository.com/artifact/org.apache.shiro/shiro-spring -->
+	<dependency>
+	    <groupId>org.apache.shiro</groupId>
+	    <artifactId>shiro-spring</artifactId>
+	    <version>${shiro.version}</version>
+	</dependency>
+    
+    <!-- https://mvnrepository.com/artifact/org.apache.shiro/shiro-ehcache -->
+	<dependency>
+	    <groupId>org.apache.shiro</groupId>
+	    <artifactId>shiro-ehcache</artifactId>
+	    <version>${shiro.version}</version>
+	</dependency>
+    
+    <!-- https://mvnrepository.com/artifact/org.apache.shiro/shiro-quartz -->
+	<dependency>
+	    <groupId>org.apache.shiro</groupId>
+	    <artifactId>shiro-quartz</artifactId>
+	    <version>${shiro.version}</version>
+	</dependency>
+    
       
   </dependencies>
   
