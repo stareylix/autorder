@@ -1,0 +1,12 @@
+2017-09-19 17:16:20 [ http-bio-8080-exec-4:0 ] - [ DEBUG ] begin invoke method===>org.springframework.aop.aspectj.MethodInvocationProceedingJoinPoint.encryptPassword
+2017-09-19 17:16:20 [ http-bio-8080-exec-4:390 ] - [ DEBUG ] end invoke method===>org.springframework.aop.aspectj.MethodInvocationProceedingJoinPoint.encryptPassword
+2017-09-19 17:23:37 [ http-bio-8080-exec-5:0 ] - [ DEBUG ] begin invoke method===>org.springframework.aop.aspectj.MethodInvocationProceedingJoinPoint.encryptPassword
+2017-09-19 17:23:38 [ http-bio-8080-exec-5:341 ] - [ DEBUG ] end invoke method===>org.springframework.aop.aspectj.MethodInvocationProceedingJoinPoint.encryptPassword
+2017-09-19 17:26:42 [ http-bio-8080-exec-4:0 ] - [ DEBUG ] begin invoke method===>org.springframework.aop.aspectj.MethodInvocationProceedingJoinPoint.encryptPassword
+2017-09-19 17:26:42 [ http-bio-8080-exec-4:52 ] - [ DEBUG ] end invoke method===>org.springframework.aop.aspectj.MethodInvocationProceedingJoinPoint.encryptPassword
+2017-09-19 17:28:34 [ http-bio-8080-exec-4:0 ] - [ DEBUG ] begin invoke method===>org.springframework.aop.aspectj.MethodInvocationProceedingJoinPoint.encryptPassword
+2017-09-19 17:28:34 [ http-bio-8080-exec-4:43 ] - [ DEBUG ] method===>org.springframework.aop.aspectj.MethodInvocationProceedingJoinPoint.encryptPassword ----->elapsed time:43 ms
+2017-09-19 17:28:34 [ http-bio-8080-exec-4:46 ] - [ DEBUG ] end invoke method===>org.springframework.aop.aspectj.MethodInvocationProceedingJoinPoint.encryptPassword
+2017-09-19 17:29:51 [ http-bio-8080-exec-4:0 ] - [ DEBUG ] begin invoke method===>org.springframework.aop.aspectj.MethodInvocationProceedingJoinPoint.encryptPassword
+2017-09-19 17:29:51 [ http-bio-8080-exec-4:31 ] - [ DEBUG ] method===>org.springframework.aop.aspectj.MethodInvocationProceedingJoinPoint.encryptPassword ----->elapsed time:33 ms
+2017-09-19 17:29:51 [ http-bio-8080-exec-4:36 ] - [ DEBUG ] end invoke method===>org.springframework.aop.aspectj.MethodInvocationProceedingJoinPoint.encryptPassword

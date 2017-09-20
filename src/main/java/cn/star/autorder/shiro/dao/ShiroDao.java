@@ -9,7 +9,7 @@ import cn.star.autorder.shiro.entity.ShiroUser;
 
 public interface ShiroDao {
 	
-	ShiroUser createUser(ShiroUser user);
+	void createUser(ShiroUser user);
 	
     void updateUser(ShiroUser user);
     

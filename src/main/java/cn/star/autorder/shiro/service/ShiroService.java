@@ -50,7 +50,7 @@ public interface ShiroService {
      * 创建用户
      * @param user
      */
-    public ShiroUser createUser(ShiroUser user);
+    public void createUser(ShiroUser user);
 
     /**
      * 修改密码

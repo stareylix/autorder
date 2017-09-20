@@ -11,6 +11,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import cn.star.autorder.shiro.dao.EnabledFlag;
 import cn.star.autorder.shiro.entity.ShiroUser;
 import cn.star.autorder.shiro.service.ShiroService;
+import cn.star.autorder.shiro.service.impl.ShiroServiceImpl;
 
 /**
  * <p>User: Zhang Kaitao

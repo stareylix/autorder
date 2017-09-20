@@ -44,4 +44,9 @@ public class PasswordHelper {
 
         user.setPassword(newPassword);
     }
+    
+    public String createloginToken() {
+    	return randomNumberGenerator.nextBytes().toHex();
+    }
+    
 }
