@@ -1,21 +1,29 @@
 package cn.star.autorder.shiro.entity;
 
 import java.io.Serializable;
+import java.util.HashSet;
+import java.util.Set;
 
-/**
- * <p>User: Zhang Kaitao
- * <p>Date: 14-1-28
- * <p>Version: 1.0
- */
 public class ShiroUser implements Serializable {
-    private String id;
+	private static final long serialVersionUID = -700985306421818180L;
+	private String id;
     private String username;
     private String password;
     private String salt;
+    private Set<Role> roleSet=new HashSet<>();
 
     private Integer locked;
+    
+    
+    public Set<Role> getRoleSet() {
+		return roleSet;
+	}
 
-    public ShiroUser() {
+	public void setRoleSet(Set<Role> roleSet) {
+		this.roleSet = roleSet;
+	}
+
+	public ShiroUser() {
     }
 
     public ShiroUser(String username, String password) {
@@ -85,14 +93,10 @@ public class ShiroUser implements Serializable {
         return id != null ? id.hashCode() : 0;
     }
 
-    @Override
-    public String toString() {
-        return "User{" +
-                "id=" + id +
-                ", username='" + username + '\'' +
-                ", password='" + password + '\'' +
-                ", salt='" + salt + '\'' +
-                ", locked=" + locked +
-                '}';
-    }
+	@Override
+	public String toString() {
+		return "ShiroUser [id=" + id + ", username=" + username + ", password=" + password + ", salt=" + salt
+				+ ", roleSet=" + roleSet + ", locked=" + locked + "]";
+	}
+
 }

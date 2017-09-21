@@ -1,17 +1,18 @@
 package cn.star.autorder.shiro.entity;
 
 import java.io.Serializable;
+import java.util.HashSet;
+import java.util.Set;
 
-/**
- * <p>User: Zhang Kaitao
- * <p>Date: 14-1-28
- * <p>Version: 1.0
- */
+
 public class Role implements Serializable {
-    private String id;
+	private static final long serialVersionUID = 5919050832825353012L;
+	private String id;
     private String role; //角色标识 程序中判断使用,如"admin"
     private String description; //角色描述,UI界面显示使用
     private Integer available; //是否可用,如果不可用将不会添加给用户
+    
+    private Set<Permission> permissionSet=new HashSet<>();
 
     public Role() {
     }
@@ -54,7 +55,16 @@ public class Role implements Serializable {
         this.available = available;
     }
 
-    @Override
+    
+    public Set<Permission> getPermissionSet() {
+		return permissionSet;
+	}
+
+	public void setPermissionSet(Set<Permission> permissionSet) {
+		this.permissionSet = permissionSet;
+	}
+
+	@Override
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
@@ -71,13 +81,11 @@ public class Role implements Serializable {
         return id != null ? id.hashCode() : 0;
     }
 
-    @Override
-    public String toString() {
-        return "Role{" +
-                "id=" + id +
-                ", role='" + role + '\'' +
-                ", description='" + description + '\'' +
-                ", available=" + available +
-                '}';
-    }
+	@Override
+	public String toString() {
+		return "Role [id=" + id + ", role=" + role + ", description=" + description + ", available=" + available
+				+ ", permissionSet=" + permissionSet + "]";
+	}
+    
+   
 }

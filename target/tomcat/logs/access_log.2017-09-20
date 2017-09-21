@@ -1,5 +1,0 @@
-192.168.6.50 - - [20/Sep/2017:16:20:47 +0800] "GET /autorder HTTP/1.1" 302 - http-bio-8080-exec-1 0
-192.168.6.50 - - [20/Sep/2017:16:20:47 +0800] "GET /autorder/ HTTP/1.1" 302 - http-bio-8080-exec-3 156
-192.168.6.50 - - [20/Sep/2017:16:20:52 +0800] "GET /autorder/shiroUserManager/login.htm;JSESSIONID=cf40efd3-67e2-4374-9342-7b5cc8cdc9c9 HTTP/1.1" 200 499 http-bio-8080-exec-4 4768
-192.168.6.50 - - [20/Sep/2017:16:21:14 +0800] "POST /autorder/shiroUserManager/loginCheck.htm HTTP/1.1" 302 - http-bio-8080-exec-5 6959
-192.168.6.50 - - [20/Sep/2017:16:21:17 +0800] "GET /autorder/shiroUserManager/login.htm?error=passError HTTP/1.1" 200 523 http-bio-8080-exec-6 3167

@@ -1,17 +1,17 @@
 package cn.star.autorder.shiro.entity;
 
 import java.io.Serializable;
+import java.util.HashSet;
+import java.util.Set;
 
-/**
- * <p>User: Zhang Kaitao
- * <p>Date: 14-1-28
- * <p>Version: 1.0
- */
+
 public class Permission implements Serializable {
-    private String id;
+	private static final long serialVersionUID = -1500889681553065298L;
+	private String id;
     private String permission; //权限标识 程序中判断使用,如"user:create"
     private String description; //权限描述,UI界面显示使用
     private Integer available; //是否可用,如果不可用将不会添加给用户
+    private Set<Resource> resuorceSet=new HashSet<>();
 
     public Permission() {
     }
@@ -54,7 +54,16 @@ public class Permission implements Serializable {
         this.available = available;
     }
 
-    @Override
+    
+    public Set<Resource> getResuorceSet() {
+		return resuorceSet;
+	}
+
+	public void setResuorceSet(Set<Resource> resuorceSet) {
+		this.resuorceSet = resuorceSet;
+	}
+
+	@Override
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
@@ -71,13 +80,11 @@ public class Permission implements Serializable {
         return id != null ? id.hashCode() : 0;
     }
 
-    @Override
-    public String toString() {
-        return "Role{" +
-                "id=" + id +
-                ", permission='" + permission + '\'' +
-                ", description='" + description + '\'' +
-                ", available=" + available +
-                '}';
-    }
+	@Override
+	public String toString() {
+		return "Permission [id=" + id + ", permission=" + permission + ", description=" + description + ", available="
+				+ available + ", resuorceSet=" + resuorceSet + "]";
+	}
+
+   
 }

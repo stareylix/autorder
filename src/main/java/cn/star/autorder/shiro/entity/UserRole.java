@@ -2,15 +2,11 @@ package cn.star.autorder.shiro.entity;
 
 import java.io.Serializable;
 
-/**
- * 用户角色关系
- * <p>User: Zhang Kaitao
- * <p>Date: 14-1-28
- * <p>Version: 1.0
- */
+
 public class UserRole implements Serializable {
 
-    private String userId;
+	private static final long serialVersionUID = -3595796896610681622L;
+	private String userId;
     private String roleId;
 
     public String getUserId() {

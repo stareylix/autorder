@@ -3,9 +3,7 @@ package cn.star.autorder.shiro.entity;
 import java.io.Serializable;
 
 public class Resource implements Serializable{
-	/**
-	 * 
-	 */
+	
 	private static final long serialVersionUID = -3765951995272685754L;
 	private String id;
 	private String resource;
