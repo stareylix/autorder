@@ -5,68 +5,109 @@ import java.io.Serializable;
 
 public class User implements Serializable{
 
-	private static final long serialVersionUID = 5306085003927673156L;
-	
-	private String userid;
-	private String username;
-	private String password;
-	private String salt;
-	private String enabaled;
-	
-	public String getUserid() {
-		return userid;
+	private static final long serialVersionUID = -4094937441319342413L;
+	private String id;
+	private String name;
+	private String sex;
+	private int age;
+	private String phone;
+	private String address;
+	private String dutycode;
+	private String enable;
+	private String enDriver;
+	private String carnumber;
+	public String getId() {
+		return id;
 	}
-	public void setUserid(String userid) {
-		this.userid = userid;
+	public void setId(String id) {
+		this.id = id;
 	}
-	public String getUsername() {
-		return username;
+	public String getName() {
+		return name;
 	}
-	public void setUsername(String username) {
-		this.username = username;
+	public void setName(String name) {
+		this.name = name;
 	}
-	public String getPassword() {
-		return password;
+	public String getSex() {
+		return sex;
 	}
-	public void setPassword(String password) {
-		this.password = password;
+	public void setSex(String sex) {
+		this.sex = sex;
 	}
-	public String getSalt() {
-		return salt;
+	public int getAge() {
+		return age;
 	}
-	public void setSalt(String salt) {
-		this.salt = salt;
+	public void setAge(int age) {
+		this.age = age;
 	}
-	public String getEnabaled() {
-		return enabaled;
+	public String getPhone() {
+		return phone;
 	}
-	public void setEnabaled(String enabaled) {
-		this.enabaled = enabaled;
+	public void setPhone(String phone) {
+		this.phone = phone;
 	}
-	public static long getSerialversionuid() {
-		return serialVersionUID;
+	public String getAddress() {
+		return address;
+	}
+	public void setAddress(String address) {
+		this.address = address;
+	}
+	public String getDutycode() {
+		return dutycode;
+	}
+	public void setDutycode(String dutycode) {
+		this.dutycode = dutycode;
+	}
+	public String getEnable() {
+		return enable;
+	}
+	public void setEnable(String enable) {
+		this.enable = enable;
+	}
+	public String getEnDriver() {
+		return enDriver;
+	}
+	public void setEnDriver(String enDriver) {
+		this.enDriver = enDriver;
+	}
+	public String getCarnumber() {
+		return carnumber;
+	}
+	public void setCarnumber(String carnumber) {
+		this.carnumber = carnumber;
 	}
 	
 	@Override
-	public boolean equals(Object o) {
-		 if (this == o) return true;
-	        if (o == null || getClass() != o.getClass()) return false;
-	
-	        User user = (User) o;
-	
-	        if (userid != null ? !userid.equals(user.userid) : user.userid != null) return false;
-	
-	        return true;
+	public boolean equals(Object obj) {
+		// TODO Auto-generated method stub
+		if(obj==null)
+			return false;
+		if(this==obj) {
+			return true;
+		}else {
+			if(obj instanceof User) {
+				User uo=(User)obj;
+				if(id != null) {
+					if(id.equals(uo.id)) {
+						return true;
+					}
+				}
+			}
+		}
+		return false;
 	}
 	
 	@Override
 	public int hashCode() {
-		return userid != null ? userid.hashCode() : 0;
+		// TODO Auto-generated method stub
+		return id != null ? id.hashCode() : 0;
 	}
 	@Override
 	public String toString() {
-		return "User [userid=" + userid + ", username=" + username + ", password=" + password + ", salt=" + salt
-				+ ", enabaled=" + enabaled + "]";
+		return "User [id=" + id + ", name=" + name + ", sex=" + sex + ", age=" + age + ", phone=" + phone + ", address="
+				+ address + ", dutycode=" + dutycode + ", enable=" + enable + ", enDriver=" + enDriver + ", carnumber="
+				+ carnumber + "]";
 	}
+	
 
 }
