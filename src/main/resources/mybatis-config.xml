@@ -8,7 +8,7 @@
         <typeAlias alias="permission" type="cn.star.autorder.shiro.entity.Permission"/>  
         <typeAlias alias="resource" type="cn.star.autorder.shiro.entity.Resource"/>  
     <!-- usermanager -->
-		<typeAlias type="user" type="cn.star.autorder.usernamanger.entity.User"/>
+		<typeAlias alias="user" type="cn.star.autorder.usernamanger.entity.User"/>
 
 		
     </typeAliases>

@@ -48,4 +48,42 @@
 			left join au_permission t3 on t3.fstr_permissionid=r2.fstr_permissionid
 		where t1.fstr_username = #{value}
 	</select>
+	
+	<insert id="createPermission" parameterType="permission">
+		insert into au_permission values(seq_su_permission.nextval,#{permission},#{description}，#{avaliable},sysdate,null)
+	</insert>
+	
+	<insert id="createRole" parameterType="role">
+		insert into au_role values(seq_au_role.nextval,#{role},#{description},#{avaliable},sysdate,null)
+	</insert>
+	
+	<insert id="addRelationUser2Role" parameterType="java.util.List">
+		<selectKey resultType="java.lang.Integer" keyProperty="id" order="AFTER">
+			SELECT LAST_INSERT_ID()
+		</selectKey>
+		insert into au_rl_user_role (fstr_userid,fstr_roleid)
+		valuse
+		<foreach collection="list" item="u2r" index="index" separator=",">
+			(#{userid,#{roleid})
+		</foreach>
+	</insert>
+	
+	<insert id="addRelationRole2Permission" parameterType="java.util.List">
+		<selectKey resultType="java.lang.Integer" keyProperty="id" order="AFTER">
+			SELECT LAST_INSERT_ID()
+		</selectKey>
+		insert into au_rl_role_permission (fstr_roleid,fstr_permissionid)
+		values
+		<foreach collection="list" item="r2p" index="index" separator=",">
+			(#{roleid},#{permissionid})
+		</foreach>
+	</insert>
+	
+	<select id="getAllRoles" resultType="role">
+		select fstr_roleid roleid,fstr_role role,fstr_description description,fstr_avaliable avaliable from au_role
+	</select>
+	
+	<select id="getAllPermissions" resultMap="permission">
+		select fstr_permissionid permissionid,fstr_permission permission,fstr_description description,fstr_avaliable avaliable from au_permission
+	</select>	
 </mapper>

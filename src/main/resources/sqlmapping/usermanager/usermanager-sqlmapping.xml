@@ -5,5 +5,4 @@
 		insert into um_user values(#{id},#{name},#{sex},#{age},#{phone},#{address},#{dutycode},#{enable},#{endriver},#{carnumber},#{create},#{update})
 	</insert>
 	
-	<select id=""></select>
 </mapper>
