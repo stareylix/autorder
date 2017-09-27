@@ -2,6 +2,7 @@ package cn.star.autorder.shiro.entity;
 
 import java.io.Serializable;
 import java.util.HashSet;
+import java.util.Iterator;
 import java.util.Set;
 
 
@@ -10,18 +11,13 @@ public class Role implements Serializable {
 	private String id;
     private String role; //角色标识 程序中判断使用,如"admin"
     private String description; //角色描述,UI界面显示使用
-    private Integer available; //是否可用,如果不可用将不会添加给用户
+    private String avaliable; //是否可用,如果不可用将不会添加给用户
     
     private Set<Permission> permissionSet=new HashSet<>();
 
     public Role() {
     }
 
-    public Role(String role, String description, Integer available) {
-        this.role = role;
-        this.description = description;
-        this.available = available;
-    }
 
     public String getId() {
         return id;
@@ -47,16 +43,15 @@ public class Role implements Serializable {
         this.description = description;
     }
 
-    public Integer getAvailable() {
-        return available;
-    }
+    public String getAvaliable() {
+		return avaliable;
+	}
 
-    public void setAvailable(Integer available) {
-        this.available = available;
-    }
+	public void setAvaliable(String avaliable) {
+		this.avaliable = avaliable;
+	}
 
-    
-    public Set<Permission> getPermissionSet() {
+	public Set<Permission> getPermissionSet() {
 		return permissionSet;
 	}
 
@@ -81,11 +76,21 @@ public class Role implements Serializable {
         return id != null ? id.hashCode() : 0;
     }
 
+
 	@Override
 	public String toString() {
-		return "Role [id=" + id + ", role=" + role + ", description=" + description + ", available=" + available
+		return "Role [id=" + id + ", role=" + role + ", description=" + description + ", avaliable=" + avaliable
 				+ ", permissionSet=" + permissionSet + "]";
 	}
-    
+	
+	public Set<String> getPermissions(){
+		Set<String> permissions=new HashSet<>();
+		Iterator<Permission> iterator = permissionSet.iterator();
+		while(iterator.hasNext()){
+			permissions.add(iterator.next().getPermission());
+		}
+		return permissions;
+	}
+	
    
 }

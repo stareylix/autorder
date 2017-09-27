@@ -16,6 +16,5 @@
     令牌：<input type="text" name="tokenKey" value="${token}" readonly="readonly"><br/>
     <input type="submit" value="登录">
 </form>
-
 </body>
 </html>

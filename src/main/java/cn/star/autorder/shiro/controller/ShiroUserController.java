@@ -119,15 +119,19 @@ public class ShiroUserController {
 				return "redirect:/shiroUserManager/login.htm";
 			}catch (LockedAccountException e3) {
 				// TODO: handle exception
-				model.addAttribute("error", "locked");
+				model.addAttribute("error", "lockedError");
 				loginTokenCache.evict(HttpUtils.getIpFromRequest(request)+"_"+tokenKey);
 				return "redirect:/shiroUserManager/login.htm";
 			}catch (IncorrectCredentialsException|UnknownAccountException e) {
 				model.addAttribute("error", "passError");
 				loginTokenCache.evict(HttpUtils.getIpFromRequest(request)+"_"+tokenKey);
 				return "redirect:/shiroUserManager/login.htm";
+			}catch (Exception e) {
+				// TODO: handle exception
+				e.printStackTrace();
 			}
-			 ShiroUser shiroUser = shiroService.findByUsername(loginUsername);
+			
+			 ShiroUser shiroUser = shiroService.getUserByUsername(loginUsername);
 			 System.out.println(shiroUser);
 			 Cookie loginTokenCookie=new Cookie("autorderToken",tokenKey);
 			 response.addCookie(loginTokenCookie);

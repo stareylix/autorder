@@ -94,4 +94,11 @@ public interface ShiroService {
      * @return
      */
     public Set<String> findPermissions(String username);
+    
+    /**
+     * 根据用户名查找用户信息
+     * @param username
+     * @return
+     */
+    ShiroUser getUserByUsername(String username);
 }

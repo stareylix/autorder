@@ -40,5 +40,7 @@ public interface ShiroDao {
     void deletePermission(String permissionId);
     
     void changePassword(String userId, String newPassword);
+    
+    ShiroUser getUserByUsername(String username);
 
 }

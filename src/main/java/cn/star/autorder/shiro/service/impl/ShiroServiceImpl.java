@@ -95,4 +95,10 @@ public class ShiroServiceImpl implements ShiroService {
 		return shiroDao.findPermissions(username);
 	}
 
+	@Override
+	public ShiroUser getUserByUsername(String username) {
+		// TODO Auto-generated method stub
+		return shiroDao.getUserByUsername(username);
+	}
+
 }

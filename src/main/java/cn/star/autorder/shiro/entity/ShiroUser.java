@@ -2,6 +2,7 @@ package cn.star.autorder.shiro.entity;
 
 import java.io.Serializable;
 import java.util.HashSet;
+import java.util.Iterator;
 import java.util.Set;
 
 public class ShiroUser implements Serializable {
@@ -12,7 +13,7 @@ public class ShiroUser implements Serializable {
     private String salt;
     private Set<Role> roleSet=new HashSet<>();
 
-    private Integer locked;
+    private String locked;
     
     
     public Set<Role> getRoleSet() {
@@ -26,10 +27,6 @@ public class ShiroUser implements Serializable {
 	public ShiroUser() {
     }
 
-    public ShiroUser(String username, String password) {
-        this.username = username;
-        this.password = password;
-    }
 
     public String getId() {
         return id;
@@ -68,11 +65,11 @@ public class ShiroUser implements Serializable {
         return salt+username;
     }
 
-    public Integer getLocked() {
+    public String getLocked() {
         return locked;
     }
 
-    public void setLocked(Integer locked) {
+    public void setLocked(String locked) {
         this.locked = locked;
     }
 
@@ -97,6 +94,24 @@ public class ShiroUser implements Serializable {
 	public String toString() {
 		return "ShiroUser [id=" + id + ", username=" + username + ", password=" + password + ", salt=" + salt
 				+ ", roleSet=" + roleSet + ", locked=" + locked + "]";
+	}
+	
+	public Set<String> getRoles(){
+		Set<String> roles=new HashSet<>();
+		Iterator<Role> iterator = roleSet.iterator();
+		while(iterator.hasNext()) {
+			roles.add(iterator.next().getRole());
+		}
+		return roles;
+	}
+	
+	public Set<String> getPermissions(){
+		Set<String> permissions=new HashSet<>();
+		Iterator<Role> iterator = roleSet.iterator();
+		while(iterator.hasNext()) {
+			permissions.addAll(iterator.next().getPermissions());
+		}
+		return permissions;
 	}
 
 }

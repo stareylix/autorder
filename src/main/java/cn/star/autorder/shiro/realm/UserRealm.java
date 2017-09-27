@@ -8,16 +8,11 @@ import org.apache.shiro.subject.PrincipalCollection;
 import org.apache.shiro.util.ByteSource;
 import org.springframework.beans.factory.annotation.Autowired;
 
-import cn.star.autorder.shiro.dao.EnabledFlag;
+import cn.star.autorder.shiro.dao.LockFlag;
 import cn.star.autorder.shiro.entity.ShiroUser;
 import cn.star.autorder.shiro.service.ShiroService;
-import cn.star.autorder.shiro.service.impl.ShiroServiceImpl;
 
-/**
- * <p>User: Zhang Kaitao
- * <p>Date: 14-1-28
- * <p>Version: 1.0
- */
+
 public class UserRealm extends AuthorizingRealm {
 	
 	@Autowired
@@ -32,9 +27,9 @@ public class UserRealm extends AuthorizingRealm {
         String username = (String)principals.getPrimaryPrincipal();
 
         SimpleAuthorizationInfo authorizationInfo = new SimpleAuthorizationInfo();
-        authorizationInfo.setRoles(shiroService.findRoles(username));
-        authorizationInfo.setStringPermissions(shiroService.findPermissions(username));
-
+        ShiroUser shiroUser = shiroService.getUserByUsername(username);
+        authorizationInfo.setRoles(shiroUser.getRoles());
+        authorizationInfo.setStringPermissions(shiroUser.getPermissions());
         return authorizationInfo;
     }
 
@@ -48,10 +43,13 @@ public class UserRealm extends AuthorizingRealm {
         if(user == null) {
             throw new UnknownAccountException();//没找到帐号
         }
-
-        if(user.getLocked()==EnabledFlag.DISABLED) {
-            throw new LockedAccountException(); //帐号锁定
-        }
+        try {
+        	if(Boolean.parseBoolean(user.getLocked())==LockFlag.LOCKED) {
+        		throw new LockedAccountException(); //帐号锁定
+        	}
+		} catch (Exception e) {
+			throw new LockedAccountException("账号状态未知。。。"); //帐号锁定
+		}
 
         //交给AuthenticatingRealm使用CredentialsMatcher进行密码匹配，如果觉得人家的不好可以自定义实现
         SimpleAuthenticationInfo authenticationInfo = new SimpleAuthenticationInfo(
