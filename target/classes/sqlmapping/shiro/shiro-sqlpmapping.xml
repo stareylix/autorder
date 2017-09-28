@@ -85,5 +85,5 @@
 	
 	<select id="getAllPermissions" resultMap="permission">
 		select fstr_permissionid permissionid,fstr_permission permission,fstr_description description,fstr_avaliable avaliable from au_permission
-	</select>	
+	</select>
 </mapper>

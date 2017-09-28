@@ -13,6 +13,19 @@
 	<import resource="classpath:spring-aop.xml"/>
 	
 	<mvc:annotation-driven />
+	<mvc:annotation-driven validator="validator" />
+	
+	<bean id="validator" class="org.springframework.validation.beanvalidation.LocalValidatorFactoryBean">
+		<property name="providerClass" value="org.hibernate.validator.HibernateValidator" />
+		<property name="validationMessageSource" ref="validateMessgaeSource" />
+	</bean>
+	
+	<bean id="validateMessgaeSource" class="org.springframework.context.support.ReloadableResourceBundleMessageSource">
+		<property name="basename" value="classpath:properties/validateMessages" />
+		<property name="fileEncodings" value="utf-8" />
+		<property name="cacheSeconds" value="120" />
+	</bean>
+	
 	
 	<context:component-scan base-package="cn.star.autorder.*.controller" />
 	

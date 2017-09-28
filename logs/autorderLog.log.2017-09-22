@@ -1,0 +1,22 @@
+2017-09-22 10:55:27 [ http-bio-8080-exec-5:0 ] - [ INFO ] {dataSource-1} inited
+2017-09-22 10:55:27 [ http-bio-8080-exec-5:111 ] - [ DEBUG ] stmt exit cache
+2017-09-22 11:02:51 [ http-bio-8080-exec-3:0 ] - [ INFO ] {dataSource-1} inited
+2017-09-22 11:02:51 [ http-bio-8080-exec-3:99 ] - [ DEBUG ] stmt enter cache
+2017-09-22 11:05:53 [ http-bio-8080-exec-3:0 ] - [ INFO ] {dataSource-1} inited
+2017-09-22 11:05:53 [ http-bio-8080-exec-3:122 ] - [ DEBUG ] stmt enter cache
+2017-09-22 11:12:29 [ http-bio-8080-exec-4:0 ] - [ INFO ] {dataSource-1} inited
+2017-09-22 11:12:29 [ http-bio-8080-exec-4:105 ] - [ DEBUG ] stmt exit cache
+2017-09-22 11:14:01 [ http-bio-8080-exec-4:0 ] - [ INFO ] {dataSource-1} inited
+2017-09-22 11:14:01 [ http-bio-8080-exec-4:132 ] - [ DEBUG ] stmt enter cache
+2017-09-22 11:16:07 [ http-bio-8080-exec-4:0 ] - [ INFO ] {dataSource-1} inited
+2017-09-22 11:16:08 [ http-bio-8080-exec-4:134 ] - [ DEBUG ] stmt enter cache
+2017-09-22 11:19:38 [ http-bio-8080-exec-4:0 ] - [ INFO ] {dataSource-1} inited
+2017-09-22 11:19:38 [ http-bio-8080-exec-4:80 ] - [ DEBUG ] stmt enter cache
+2017-09-22 11:21:15 [ http-bio-8080-exec-4:0 ] - [ INFO ] {dataSource-1} inited
+2017-09-22 11:21:15 [ http-bio-8080-exec-4:102 ] - [ DEBUG ] stmt enter cache
+2017-09-22 11:26:30 [ http-bio-8080-exec-4:0 ] - [ INFO ] {dataSource-1} inited
+2017-09-22 11:26:30 [ http-bio-8080-exec-4:135 ] - [ DEBUG ] stmt enter cache
+2017-09-22 11:26:30 [ http-bio-8080-exec-4:152 ] - [ DEBUG ] stmt enter cache
+2017-09-22 13:48:49 [ http-bio-8080-exec-4:0 ] - [ INFO ] {dataSource-1} inited
+2017-09-22 13:48:49 [ http-bio-8080-exec-4:111 ] - [ DEBUG ] stmt enter cache
+2017-09-22 13:48:49 [ http-bio-8080-exec-4:122 ] - [ DEBUG ] stmt enter cache

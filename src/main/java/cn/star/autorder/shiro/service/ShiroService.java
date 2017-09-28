@@ -1,10 +1,13 @@
 package cn.star.autorder.shiro.service;
 
-import java.util.Set;
+
+import java.util.List;
 
 import cn.star.autorder.shiro.entity.Permission;
 import cn.star.autorder.shiro.entity.Role;
+import cn.star.autorder.shiro.entity.RolePermssion;
 import cn.star.autorder.shiro.entity.ShiroUser;
+import cn.star.autorder.shiro.entity.UserRole;
 
 public interface ShiroService {
 	
@@ -42,4 +45,16 @@ public interface ShiroService {
      * @return
      */
     ShiroUser getUserByUsername(String username);
+    
+    /**
+     * 增加用户-角色
+     * @param list
+     */
+    void addRelationUser2Role(List<UserRole> list);
+    
+    /**
+     * 增加角色-权限
+     * @param list
+     */
+    void addRelationRole2Permission(List<RolePermssion> list);
 }

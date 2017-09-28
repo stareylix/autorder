@@ -3,6 +3,8 @@
 	"-//Apache Software Foundation//DTD Tiles Configuration 3.0//EN"
 	"http://tiles.apache.org/dyds/tiles-config_3_0.dtd">
 	<tiles-definitions>
-		<definition name="login" template="/common/login.jsp"></definition>
-		<definition name="logout" template="/common/logout.jsp"></definition>
+		<definition name="loginView" template="/WEB-INF/jsp/shiro/login.jsp"></definition>
+		<definition name="logout" template="/WEB-INF/jsp/shiro/logout.jsp"></definition>
+		<definition name="createUserView" template="/WEB-INF/jsp/shiro/createUserView.jsp"></definition>
+		
 	</tiles-definitions>

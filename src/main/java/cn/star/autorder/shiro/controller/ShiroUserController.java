@@ -5,6 +5,7 @@ package cn.star.autorder.shiro.controller;
 import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.validation.Valid;
 
 import org.apache.commons.lang3.StringUtils;
 import org.apache.shiro.SecurityUtils;
@@ -19,6 +20,7 @@ import org.springframework.cache.Cache;
 import org.springframework.cache.CacheManager;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
@@ -75,7 +77,7 @@ public class ShiroUserController {
 				break;
 			}
 		}
-		return "login";
+		return "loginView";
 	}
 	
 	/**
@@ -184,4 +186,11 @@ public class ShiroUserController {
 		}
 		return StringUtils.isNotEmpty(loginTokenCache.get(ip+"_"+tokenKey, String.class));
 	}
+	
+	@RequestMapping("/ShiroUserManager/toCreateUserView.htm")
+	public String toCreateUserView() {
+		return "createUserView";
+	}
+	
+	
 }

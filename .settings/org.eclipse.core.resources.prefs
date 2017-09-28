@@ -2,4 +2,6 @@ eclipse.preferences.version=1
 encoding//src/main/java=utf8
 encoding//src/main/resources/properties/database.properties=UTF-8
 encoding//src/main/resources/properties/log4j.properties=UTF-8
+encoding//src/main/resources/properties/validateMessages.properties=UTF-8
+encoding//src/main/webapp/WEB-INF/jsp/shiro/createUserView.jsp=UTF-8
 encoding//src/test/java=utf8
